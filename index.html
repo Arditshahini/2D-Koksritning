@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kök Designer</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="card-container">
+                <div class="card">
+                    <img src="/img/Aaria.jpeg" alt="Bild 1" />
+                    <h3>Aaria 16mm</h3>
+                    <button class="zoom-button" onclick="openImage(this)">
+                        Zooma
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="/img/Country_Countryline.jpeg" alt="Bild 2" />
+                    <h3>Namn 2</h3>
+                    <button class="zoom-button" onclick="openImage(this)">
+                        Zooma
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="/img/Duo.jpeg" alt="Bild 2" />
+                    <h3>Namn 2</h3>
+                    <button class="zoom-button" onclick="openImage(this)">
+                        Zooma
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="/img/Duuri.jpeg" alt="Bild 2" />
+                    <h3>Namn 2</h3>
+                    <button class="zoom-button" onclick="openImage(this)">
+                        Zooma
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="/img/Fagotti.jpeg" alt="Bild 2" />
+                    <h3>Namn 2</h3>
+                    <button class="zoom-button" onclick="openImage(this)">
+                        Zooma
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="/img/Folk.jpeg" alt="Bild 2" />
+                    <h3>Namn 2</h3>
+                    <button class="zoom-button" onclick="openImage(this)">
+                        Zooma
+                    </button>
+                </div>
+                <!-- Lägg till fler kort här -->
+            </div>
+            <div id="colorPalette" class="colorPaletteContainer"></div>
+
+            <div class="controls">
+                <button id="myBtn">Luckor</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Välj lucka:</p>
+                        <!-- Skapa en tabell för att visa måtten -->
+                        <table class="nice-table">
+                            <thead>
+                                <tr>
+                                    <th>Bredd</th>
+                                    <th>Höjd</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Lägg till rader för varje mått -->
+                                <tr>
+                                    <td>195</td>
+                                    <td>850</td>
+                                    <td><button class="table-button" onclick="addFront(195, 850)">Lägg till</button></td>
+                                </tr>
+                                <tr>
+                                    <td>295</td>
+                                    <td>850</td>
+                                    <td><button class="table-button" onclick="addFront(295, 850)">Lägg till</button></td>
+                                </tr>
+                                <tr>
+                                    <td>395</td>
+                                    <td>850</td>
+                                    <td><button class="table-button" onclick="addFront(395, 850)">Lägg till</button></td>
+                                </tr>
+                                <tr>
+                                    <td>495</td>
+                                    <td>850</td>
+                                    <td><button class="table-button" onclick="addFront(495, 850)">Lägg till</button></td>
+                                </tr>
+                                <tr>
+                                    <td>595</td>
+                                    <td>850</td>
+                                    <td><button class="table-button" onclick="addFront(595, 850)">Lägg till</button></td>
+                                </tr>
+                                <tr>
+                                    <td>195</td>
+                                    <td>990</td>
+                                    <td><button class="table-button" onclick="addFront(195, 990)">Lägg till</button></td>
+                                </tr>
+                                <tr>
+                                    <td>295</td>
+                                    <td>990</td>
+                                    <td><button class="table-button" onclick="addFront(295, 990)">Lägg till</button></td>
+                                </tr>
+                                <tr>
+                                    <td>395</td>
+                                    <td>990</td>
+                                    <td><button class="table-button" onclick="addFront(395, 990)">Lägg till</button></td>
+                                </tr>
+                                <tr>
+                                    <td>495</td>
+                                    <td>990</td>
+                                    <td><button class="table-button" onclick="addFront(495, 990)">Lägg till</button></td>
+                                </tr>
+                                <tr>
+                                    <td>595</td>
+                                    <td>990</td>
+                                    <td><button class="table-button" onclick="addFront(595, 990)">Lägg till</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+        <div class="container-2">
+
+                <div id="canvas">
+                    <!-- Rektanglar kommer att läggas till här dynamiskt -->
+                </div>
+
+        </div>
+        <div class="container-3">
+            <div id="rectangleList">
+                <!-- Här kommer listan över rektanglar att visas -->
+            </div>
+        </div>
+        <div id="popup-overlay" class="popup-overlay">
+            <div id="popup-content" class="popup-content">
+                <span
+                    id="close-popup"
+                    class="close-popup"
+                    onclick="closePopup()"
+                    >&times;</span
+                >
+                <img
+                    id="popup-image"
+                    class="popup-image"
+                    src=""
+                    alt="Zoomad bild"
+                />
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
